@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>my liat</h1>
+        <ul id="mylist">
+            <li id="firstli" class="item">i am good boy</li>
+            <li class="item">i am hard worker</li>
+            <li class="item">i am honest</li>
+            <li class="item">i like watching movie</li>
+            <li class="item">i dislike reading</li>
+        </ul>
+        <button id="buttomid">clack hare</button>
+    </div>
+
+
+
+
+
+
+
+
+<script>
+document.getElementById('mylist').addEventListener('click',function(event){
+    event.target.parentNode.removeChild(event.target)
+})
+
+
+
+
+    document.getElementById('container').addEventListener('click', function(event){
+        console.log('click by container');
+    })
+    document.getElementById('mylist').addEventListener('click', function(event){
+        console.log('click by mylist');
+        event.stopPropagation();
+    })
+    document.getElementById('firstli').addEventListener('click', function(event){
+        console.log('click by firstli');
+    })
+    let liadd=document.getElementById('mylist');
+    let newli =document.createElement('li');
+    newli.innerHTML='i well a bisnessman';
+    liadd.appendChild(newli);
+
+    let h1add =document.getElementById('container');
+    let newtext =document.createElement('h2');
+    newtext.innerHTML='asibur rahman';
+    h1add.appendChild(newtext);
+
+
+
+
+document.getElementById('buttomid').addEventListener('click', function(event){
+    var newLiAdd =document.getElementById('mylist');
+    var newliEdit=document.createElement('li');
+    newliEdit.innerHTML='i well be back';
+    newLiAdd.appendChild(newliEdit);
+})
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

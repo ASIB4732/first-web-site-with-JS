@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event managment coumpany</title>
+</head>
+<body>
+    <h1 onclick="handelclick()">asibur rahman</h1>
+
+    <button onclick="handelclick()">clack me</button>
+    <button>clack me-1</button>
+    <button id="second">clack me-2</button>
+    <button>clack me-3</button>
+    <button id="fourthButton">clack me-4</button>
+    <button id="lastParson">clack me-5</button>
+    <script>
+        document.getElementById('fourthButton').addEventListener('click',function(){
+            document.body.style.backgroundColor='lightblue';
+            document.body.style.color='orenge'
+        })
+        function handelclick(){
+            console.log(new Date);
+        }
+        function color(){
+            document.body.style.color='tomato';
+            document.body.style.backgroundColor='gray'
+        }
+        let sacondbutton =document.getElementById('second')
+        // sacondbutton.onclick=color;
+        sacondbutton.addEventListener('click',color)
+
+
+        document.getElementById('lastParson').addEventListener('click', function(){
+            document.body.style.backgroundColor='green';
+            document.body.style.color='red';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        section {
+            border: 5px solid gray;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="wellcometeg">wellcome</h2>
+    <section>
+        <article id="first-id" class="special">
+            <h1 class="author">asibur rahman</h1>
+            <p class="first">i am a serius wrb devolaper</p>
+            <p title="i am the most inpurtant author" id="best">i am a good boy</p>
+        </article>
+    </section>
+    <section>
+        <article class="special">
+            <h1 class="author">asibur rahman</h1>
+            <p class="first">i am a serius wrb devolaper</p>
+            <p title="i am the most inpurtant author" id="best">i am a good boy</p>
+        </article>
+    </section>
+    <section>
+        <article class="special">
+            <h1 class="author">asibur rahman</h1>
+            <p class="first">i am a serius wrb devolaper</p>
+            <p title="i am the most inpurtant author" id="best">i am a good boy</p>
+        </article>
+    </section>
+    <section>
+        <article class="special">
+            <h1 class="author">asibur rahman</h1>
+            <p class="first">i am a serius wrb devolaper</p>
+            <p title="i am the most inpurtant author" id="best">i am a good boy</p>
+        </article>
+    </section>
+    <section>
+        <article class="special">
+            <h1 class="author">asibur rahman</h1>
+            <p class="first">i am a serius wrb devolaper</p>
+            <p title="i am the most inpurtant author" id="best">i am a good boy</p>
+        </article>
+    </section>
+    <section>
+        <article>
+            <ul id="ul-add">
+                <li>book-1</li>
+                <li>book-2</li>
+                <li>book-3</li>
+                <li>book-4</li>
+                <li>book-5</li>
+            </ul>
+        </article>
+    </section>
+
+    <script>
+        var wellcomeelement = document.getElementById("wellcometeg")
+        wellcomeelement.style.color = "orange"
+        wellcomeelement.style.fontSize = "40px"
+        wellcomeelement.style.textAlign = "center"
+        var authors = document.getElementsByClassName("author");
+        for (let index = 0; index < authors.length; index++) {
+            const element = authors[index];
+            console.log(element);
+            console.log(element.innerHTML);
+            element.innerHTML ='lekhok-'+index;
+
+            element.style.backgroundColor = "lightblue"
+            element.setAttribute("title", "this is me")
+
+        }
+        let article =document.getElementById('first-id');
+        let newpraragraph =document.createElement('h3');
+        newpraragraph.innerHTML='this is new ';
+        article.appendChild(newpraragraph);
+        let uladd=document.getElementById('ul-add');
+        let lasttitle =document.createElement('p');
+        lasttitle.innerHTML='This is the list of book';
+        uladd.appendChild(lasttitle);
+
+        let oladd=document.getElementById('ul-add');
+        let lastol=document.createElement('li');
+        lastol.innerHTML='book-6';
+        oladd.appendChild(lastol);
+        
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
